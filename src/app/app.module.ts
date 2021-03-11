@@ -1,4 +1,3 @@
-import { NotFoundModule } from './modules/not-found/not-found.module';
 /* Modules */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -6,12 +5,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './modules/angular-routing/app-routing.module';
 import { AngularMaterialModule } from './modules/angular-material/angular.material.module';
-import { HomePageLayoutComponent } from './pages/home-page/home-page-layout/home-page-layout.component';
+import { NotFoundModule } from './modules/not-found/not-found.module';
+import { ConfirmationDialogModule } from './modules/confirmation-dialog/confirmation-dialog.module';
 
 /* Global Components */
 
 
 /* Home page components */
+import { HomePageLayoutComponent } from './pages/home-page/home-page-layout/home-page-layout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { HomePageLayoutComponent } from './pages/home-page/home-page-layout/home
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    NotFoundModule
+    NotFoundModule,
+    ConfirmationDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
