@@ -33,7 +33,7 @@
 
 .redirect,
 .notFound {
-  margin-left: 10px;
+  margin: var(--defaultMargin) 0 var(--defaultMargin) var(--defaultMargin);
   font-size: 30px;
   font-weight: 100;
   color: var(--textColor);

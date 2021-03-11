@@ -1,1 +1,7 @@
-
+<h1>Täskit: </h1>
+<div *ngFor="let task of storageService.tasks">
+  <p>{{ task.taskId }}</p>
+  <p>{{ task.category }}</p>
+  <p>{{ task.description }}</p>
+  <hr>
+</div>

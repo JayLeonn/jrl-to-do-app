@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TaskCategoryType } from 'src/app/models/assets/task-category.enum';
+import { TaskCategoryType } from 'src/app/models/enums/task-category.enum';
 
 @Component({
   selector: 'app-task-details',

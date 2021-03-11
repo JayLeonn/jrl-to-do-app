@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-list-of-tasks',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListOfTasksComponent implements OnInit {
 
-  constructor() { }
+  constructor(public storageService: StorageService) { }
 
   ngOnInit(): void {
+    this.storageService.getStorageItems();
+    console.log(this.storageService.tasks);
   }
 
 }

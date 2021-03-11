@@ -6,15 +6,14 @@
 
 :root {
   /* App Colors */
-  --primaryColor: #673ab7;
-  --primaryColorRgb: 103, 58, 183;
-  --accentColor: #ffd740;
+  --primaryColor: rgb(105, 240, 174);
+  --primaryColorRgb: 105, 240, 174;
   --backgroundColor: rgba(53, 54, 58, 1);
 
   /* Typography */
   --textColor: white;
-  --defaultFont: 18px;
 
+  /* Gutters */
   --defaultMargin: 15px;
   --defaultPadding: 15px;
 

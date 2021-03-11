@@ -3,4 +3,4 @@
 groupName="task"
 class="create-task"
 ></app-task-details>
-<button *ngIf="formGroup.dirty && formGroup.valid">create task</button>
+<button *ngIf="formGroup.dirty && formGroup.valid" (click)="createTask()">create task</button>
