@@ -1,0 +1,18 @@
+.description-field {
+    width: 600px;
+    max-width: 90vw;
+}
+
+.details-row {
+    justify-content: space-between;
+}
+
+.category-field, .due-date-field {
+    width: 285px;
+    max-width: 45vw;
+}
+
+/* Move the default mat-select panel down */
+::ng-deep .category-selection{
+    margin-top: 15% !important;
+}

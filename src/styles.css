@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/normalize.css/normalize.css"; /* Normalize.css to remove differing default browser styles */
+@import '@angular/material/prebuilt-themes/purple-green.css';
 
 /**** Application wide variables ****/
 
@@ -7,7 +8,7 @@
   /* App Colors */
   --primaryColor: #673ab7;
   --primaryColorRgb: 103, 58, 183;
-  --secondaryColor: #ffd740;
+  --accentColor: #ffd740;
   --backgroundColor: rgba(53, 54, 58, 1);
 
   /* Typography */
@@ -17,7 +18,6 @@
   --defaultMargin: 15px;
   --defaultPadding: 15px;
 
-  --defaultBorder: 1px solid var(--borderGray);
   --defaultShadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
     0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 10px 2px rgba(0, 0, 0, 0.12);
 }
@@ -50,4 +50,17 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+  opacity: 1;
+}
+
+.mat-input-element {
+  caret-color: white;
+}
+
+.mat-form-field-label {
+  color: white;
 }
