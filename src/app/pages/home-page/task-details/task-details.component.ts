@@ -27,8 +27,8 @@ export class TaskDetailsComponent implements OnInit, OnChanges {
 
   initFormGroup(): FormGroup {
     return this.fb.group({
-      description: ['', Validators.required],
-      category: ['', Validators.required],
+      description: [undefined, Validators.required],
+      category: [undefined, Validators.required],
       dueDate: [new Date(), Validators.required],
     });
   }

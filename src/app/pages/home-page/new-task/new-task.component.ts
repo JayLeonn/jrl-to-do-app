@@ -23,5 +23,6 @@ export class NewTaskComponent implements OnInit {
       isChecked: false,
       ...this.formGroup.value.task,
     });
+    this.formGroup = new FormGroup({});
   }
 }

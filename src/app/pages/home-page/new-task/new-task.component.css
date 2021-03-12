@@ -1,9 +1,12 @@
 .create-task {
-    width: 100%;
-    border-color: var(--primaryColor);
-    text-align: center;
+  width: 100%;
+  text-align: center;
+}
+
+.create-task:not(:disabled) {
+  border-color: var(--primaryColor);
 }
 
 .new-task-container {
-    width: 600px;
+  width: 600px;
 }

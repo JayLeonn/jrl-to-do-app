@@ -6,7 +6,7 @@
   ></app-task-details>
   <button
     mat-stroked-button
-    *ngIf="formGroup.dirty && formGroup.valid"
+    [disabled]="formGroup.pristine || formGroup.invalid"
     (click)="createTask()"
     class="create-task"
   >

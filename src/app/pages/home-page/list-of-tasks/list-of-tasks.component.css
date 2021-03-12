@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.list-of-tasks .cdk-drag{
+.list-of-tasks .cdk-drag {
   margin: var(--defaultMargin) auto;
 }
 
@@ -33,7 +33,6 @@
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.list-of-tasks.cdk-drop-list-dragging
-  .cdk-drag:not(.cdk-drag-placeholder) {
+.list-of-tasks.cdk-drop-list-dragging .cdk-drag:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
