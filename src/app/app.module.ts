@@ -1,4 +1,3 @@
-import { TaskDetailsComponent } from './pages/home-page/task-details/task-details.component';
 /* Modules */
 import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
@@ -16,17 +15,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /* Home page components */
 import { HomePageLayoutComponent } from './pages/home-page/home-page-layout/home-page-layout.component';
-import { CreateTaskComponent } from './pages/home-page/create-task/create-task.component';
-import { ListOfTasksComponent } from './pages/home-page/list-of-tasks/list-of-tasks.component';
 import { NewTaskComponent } from './pages/home-page/new-task/new-task.component';
+import { TaskDetailsComponent } from './pages/home-page/task-details/task-details.component';
+import { ListOfTasksComponent } from './pages/home-page/list-of-tasks/list-of-tasks.component';
+import { TaskContainerComponent } from './pages/home-page/task-container/task-container.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomePageLayoutComponent,
-    CreateTaskComponent,
     TaskDetailsComponent,
     ListOfTasksComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    TaskContainerComponent
   ],
   imports: [
     BrowserModule,

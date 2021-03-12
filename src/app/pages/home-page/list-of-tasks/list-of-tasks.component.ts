@@ -17,13 +17,6 @@ export class ListOfTasksComponent implements OnInit {
     console.log(this.storageService.tasks);
   }
 
-  deleteTask(task: Task): void {
-    this.storageService.deleteTask(task);
-  }
-
-  updateTask(task: Task): void {
-    this.storageService.updateTaskStatus(task);
-  }
 
   drop(event: CdkDragDrop<Task[]>): void {
     const tempArray = this.storageService.tasks;
@@ -35,7 +28,5 @@ export class ListOfTasksComponent implements OnInit {
     this.storageService.setTasksToStorage(tempArray);
   }
 
-  get TaskCategoryType(): typeof TaskCategoryType {
-    return TaskCategoryType;
-  }
+
 }
