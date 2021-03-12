@@ -53,9 +53,3 @@ h2.redirect {
 span:focus {
   outline: 0 !important;
 }
-
-@media only screen and (max-width: 1024px) {
-  .error-container {
-    display: none;
-  }
-}

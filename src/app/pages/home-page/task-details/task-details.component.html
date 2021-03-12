@@ -26,7 +26,7 @@
         panelClass="category-selection"
         required
       >
-        <mat-option *ngFor="let category of categoryTypes" [value]="category">
+        <mat-option *ngFor="let category of categoryTypes" [value]="category" [ngClass]="'border-' + category">
           {{ category | titlecase }}
         </mat-option>
       </mat-select>

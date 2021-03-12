@@ -13,6 +13,8 @@ export class StorageService {
   public addNewTask(task: Task): void {
     this.tasks.push(task);
     this.setTasksToStorage(this.tasks);
+    this.setTasksToStorage([task]);
+
   }
 
   public setTasksToStorage(tasks: Task[]): void {

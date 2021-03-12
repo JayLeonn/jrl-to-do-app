@@ -7,7 +7,8 @@
         home: task?.category === TaskCategoryType.Home,
         sports: task?.category === TaskCategoryType.Sports,
         payment: task?.category === TaskCategoryType.Payment,
-        meeting: task?.category === TaskCategoryType.Meeting
+        meeting: task?.category === TaskCategoryType.Meeting,
+        other: task?.category === TaskCategoryType.Other
       }"
     >
       <p class="category-title">{{ task?.category | titlecase }}</p>

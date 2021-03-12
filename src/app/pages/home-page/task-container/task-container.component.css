@@ -115,3 +115,23 @@ div.meeting
   background: var(--meetingColor);
 }
 
+/* Other */
+div.other
+  + ::ng-deep
+  .mat-checkbox-checked.mat-accent
+  .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+div.other
+  + ::ng-deep
+  .mat-checkbox-checked.mat-accent
+  .mat-checkbox-ripple
+  .mat-ripple-element {
+  background-color: var(--otherColor);
+  background: var(--otherColor);
+}
+
+@media only screen and (max-width: 1024px) {
+    .description, .date{
+        font-size: 12px;
+    }
+}

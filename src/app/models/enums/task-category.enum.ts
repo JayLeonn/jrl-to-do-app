@@ -4,4 +4,5 @@ export enum TaskCategoryType {
   Sports = 'sports',
   Payment = 'payment',
   Meeting = 'meeting',
+  Other = 'other'
 }

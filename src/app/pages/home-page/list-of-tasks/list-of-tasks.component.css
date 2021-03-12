@@ -1,5 +1,6 @@
 .list-of-tasks {
   width: 600px;
+  max-width: 85vw;
   margin: 0 auto;
 }
 
