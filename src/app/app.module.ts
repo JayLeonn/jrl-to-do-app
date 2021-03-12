@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './modules/angular-routing/app-routing.module';
 import { AngularMaterialModule } from './modules/angular-material/angular.material.module';
 import { NotFoundModule } from './modules/not-found/not-found.module';
-import { ConfirmationDialogModule } from './modules/confirmation-dialog/confirmation-dialog.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -35,7 +34,6 @@ import { TaskContainerComponent } from './pages/home-page/task-container/task-co
     BrowserAnimationsModule,
     AngularMaterialModule,
     NotFoundModule,
-    ConfirmationDialogModule,
     FormsModule,
     ReactiveFormsModule,
   ],
