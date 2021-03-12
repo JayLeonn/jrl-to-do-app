@@ -1,6 +1,15 @@
-<app-task-details
-[parentForm]="formGroup"
-groupName="task"
-class="create-task"
-></app-task-details>
-<button *ngIf="formGroup.dirty && formGroup.valid" (click)="createTask()">create task</button>
+<div class="new-task-container">
+  <app-task-details
+    [parentForm]="formGroup"
+    groupName="task"
+    class="create-task"
+  ></app-task-details>
+  <button
+    mat-stroked-button
+    *ngIf="formGroup.dirty && formGroup.valid"
+    (click)="createTask()"
+    class="create-task"
+  >
+    CREATE
+  </button>
+</div>

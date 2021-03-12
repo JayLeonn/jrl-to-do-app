@@ -12,8 +12,6 @@ export class StorageService {
 
   public addNewTask(task: Task): void {
     this.tasks.push(task);
-    console.log('new task');
-    console.log(this.tasks);
     this.setTasksToStorage(this.tasks);
   }
 
@@ -25,12 +23,23 @@ export class StorageService {
     this.tasks = JSON.parse(
       localStorage.getItem(this.storageIdentifier) || '{}'
     );
+    console.log(this.tasks);
   }
 
   deleteTask(task: Task): void {
     const tempTasks: Task[] = this.tasks.filter((storageTask) => {
       return storageTask !== task;
     });
+    this.setTasksToStorage(tempTasks);
+    this.getStorageItems();
+  }
+
+  updateTask(task: Task): void {
+    const idx = this.tasks.findIndex(
+      (storageTask) => storageTask.taskId === task.taskId
+    );
+    const tempTasks = this.tasks;
+    tempTasks[idx].isChecked = !task.isChecked;
     this.setTasksToStorage(tempTasks);
     this.getStorageItems();
   }

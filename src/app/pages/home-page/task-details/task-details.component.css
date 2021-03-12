@@ -4,12 +4,22 @@
 }
 
 .details-row {
-    justify-content: space-between;
+    justify-content: center;
 }
 
+.details-row .mat-form-field:first-child {
+    padding-right: var(--defaultMargin);
+}
+
+.details-row .mat-form-field:last-child {
+    padding-left: var(--defaultMargin);
+}
+
+
 .category-field, .due-date-field {
-    width: 285px;
+    width: 300px;
     max-width: 45vw;
+    box-sizing: border-box;
 }
 
 /* Move the default mat-select panel down */

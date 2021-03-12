@@ -1,0 +1,9 @@
+.create-task {
+    width: 100%;
+    border-color: var(--primaryColor);
+    text-align: center;
+}
+
+.new-task-container {
+    width: 600px;
+}

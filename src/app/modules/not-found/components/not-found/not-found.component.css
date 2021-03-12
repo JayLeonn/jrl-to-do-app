@@ -44,7 +44,7 @@ h2.redirect {
 }
 
 /* redirect to frontpage */
-.home {
+.home-link {
   color: var(--primaryColor);
   cursor: pointer;
   text-decoration: underline;

@@ -17,13 +17,11 @@ export class NewTaskComponent implements OnInit {
   }
 
   createTask(): void {
-
     this.storageService.addNewTask({
       taskId: uuidv4(),
       timeStamp: new Date(),
       isChecked: false,
       ...this.formGroup.value.task,
     });
-
   }
 }

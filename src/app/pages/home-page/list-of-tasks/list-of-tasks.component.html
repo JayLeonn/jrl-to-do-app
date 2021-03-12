@@ -1,7 +1,42 @@
-<h1>Täskit: </h1>
-<div *ngFor="let task of storageService.tasks">
-  <p>{{ task.taskId }}</p>
-  <p>{{ task.category }}</p>
-  <p>{{ task.description }}</p>
-  <hr>
+<div *ngIf="storageService.tasks.length" class="list-of-tasks">
+  <div
+    *ngFor="let task of storageService.tasks"
+    class="flex-row task-container"
+  >
+    <div class="flex-row">
+      <div
+        class="category-ribbon"
+        [ngClass]="{
+          work: task.category === TaskCategoryType.Work,
+          home: task.category === TaskCategoryType.Home,
+          sports: task.category === TaskCategoryType.Sports,
+          payment: task.category === TaskCategoryType.Payment,
+          meeting: task.category === TaskCategoryType.Meeting
+        }"
+      >
+        <p class="category-title">{{ task.category | titlecase }}</p>
+      </div>
+
+      <mat-checkbox
+        [checked]="task.isChecked"
+        color="accent"
+        (change)="updateTask(task)"
+      >
+      </mat-checkbox>
+      <p class="description">{{ task.description | titlecase}}</p>
+
+    </div>
+    <div class="flex-row right-side-details">
+      <p>{{ task.dueDate | date: "dd.MM.yyyy" }}</p>
+
+      <button
+        mat-icon-button
+        aria-label="Delete task"
+        (click)="deleteTask(task)"
+        class="delete-task"
+      >
+        <mat-icon color="#FFF"> delete_outline</mat-icon>
+      </button>
+    </div>
+  </div>
 </div>

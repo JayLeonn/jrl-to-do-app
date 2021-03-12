@@ -1,19 +1,24 @@
 .home-page-container {
-  height: 100vh;
-  display: flex;
-  margin-top: 150px;
+  height: auto;
+  justify-content: center;
 }
 
-.task-container {
-  margin: 0 auto;
+.new-task-actions {
+  position: sticky;
+  align-self: flex-start;
+  top: 0;
+  z-index: 1;
+  background-color: var(--backgroundColor);
+  padding-bottom: 10px;
+  align-items: center;
 }
 
 h1 {
   font-family: "Segoe UI";
-  font-weight: bold;
-  margin: 2em 0;
-  color: white;
-  font-size: 40px;
+  font-weight: 700;
+  margin: 1.5em 0;
+  color: var(--primaryColor);
+  font-size: 60px;
   line-height: 40px;
   text-align: center;
 }

@@ -7,30 +7,19 @@ const routes: Routes = [
   {
     path: '', // path: /
     pathMatch: 'full',
-    redirectTo: 'ui',
+    redirectTo: 'home',
   },
   {
-    path: 'ui',
-    pathMatch: 'prefix',
-    children: [
-      {
-        path: '', // path: /ui/
-        pathMatch: 'full',
-        redirectTo: 'home',
-      },
-      {
-        path: 'home', // path: /ui/home
-        component: HomePageLayoutComponent,
-      },
-      {
-        path: '404',
-        component: NotFoundComponent,
-      },
-    ],
+    path: 'home', // path: /home
+    component: HomePageLayoutComponent,
+  },
+  {
+    path: '404',
+    component: NotFoundComponent,
   },
   {
     path: '**',
-    redirectTo: 'ui/404',
+    redirectTo: '404',
     pathMatch: 'full',
   },
 ];
