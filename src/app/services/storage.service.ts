@@ -11,7 +11,6 @@ export class StorageService {
   public addNewTask(task: Task): void {
     this.tasks.push(task);
     this.setTasksToStorage(this.tasks);
-    this.setTasksToStorage([task]);
   }
 
   public setTasksToStorage(tasks: Task[]): void {
@@ -20,7 +19,7 @@ export class StorageService {
 
   public getStorageItems(): void {
     this.tasks = JSON.parse(
-      localStorage.getItem(this.storageIdentifier) || '{}'
+      localStorage.getItem(this.storageIdentifier) || '[]'
     );
     console.log(this.tasks);
   }
