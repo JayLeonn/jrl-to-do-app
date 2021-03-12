@@ -15,18 +15,18 @@ export class StorageService {
     this.setTasksToStorage(this.tasks);
   }
 
-  private setTasksToStorage(tasks: Task[]): void {
+  public setTasksToStorage(tasks: Task[]): void {
     localStorage.setItem(this.storageIdentifier, JSON.stringify(tasks));
   }
 
-  getStorageItems(): void {
+  public getStorageItems(): void {
     this.tasks = JSON.parse(
       localStorage.getItem(this.storageIdentifier) || '{}'
     );
     console.log(this.tasks);
   }
 
-  deleteTask(task: Task): void {
+  public deleteTask(task: Task): void {
     const tempTasks: Task[] = this.tasks.filter((storageTask) => {
       return storageTask !== task;
     });
@@ -34,7 +34,7 @@ export class StorageService {
     this.getStorageItems();
   }
 
-  updateTask(task: Task): void {
+  public updateTaskStatus(task: Task): void {
     const idx = this.tasks.findIndex(
       (storageTask) => storageTask.taskId === task.taskId
     );
