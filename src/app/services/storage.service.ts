@@ -8,13 +8,10 @@ export class StorageService {
   private storageIdentifier = 'JRL_To_Do_Tasks';
   public tasks: Task[] = [];
 
-  constructor() {}
-
   public addNewTask(task: Task): void {
     this.tasks.push(task);
     this.setTasksToStorage(this.tasks);
     this.setTasksToStorage([task]);
-
   }
 
   public setTasksToStorage(tasks: Task[]): void {
