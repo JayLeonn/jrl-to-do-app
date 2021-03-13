@@ -1,0 +1,13 @@
+.create-task {
+  width: 100%;
+  text-align: center;
+}
+
+.create-task:not(:disabled) {
+  border-color: var(--primaryColor);
+}
+
+.new-task-container {
+  width: 600px;
+  max-width: 90vw;
+}

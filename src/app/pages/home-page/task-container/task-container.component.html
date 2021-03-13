@@ -1,0 +1,37 @@
+<div class="flex-row">
+  <div class="flex-row task-container">
+    <div
+      class="category-ribbon"
+      [ngClass]="{
+        work: task?.category === TaskCategoryType.Work,
+        home: task?.category === TaskCategoryType.Home,
+        sports: task?.category === TaskCategoryType.Sports,
+        payment: task?.category === TaskCategoryType.Payment,
+        meeting: task?.category === TaskCategoryType.Meeting,
+        other: task?.category === TaskCategoryType.Other
+      }"
+    >
+      <p class="category-title">{{ task?.category | titlecase }}</p>
+    </div>
+
+    <mat-checkbox
+      [checked]="task ? task.isChecked : false"
+      color="accent"
+      (change)="updateTask()"
+    >
+    </mat-checkbox>
+    <p class="description">{{ task?.description | titlecase }}</p>
+  </div>
+  <div class="flex-row right-side-details">
+    <p class="date">{{ task?.dueDate | date: "dd.MM.yyyy" }}</p>
+
+    <button
+      mat-icon-button
+      aria-label="Delete task"
+      (click)="deleteTask()"
+      class="delete-task"
+    >
+      <mat-icon color="#FFF"> delete_outline</mat-icon>
+    </button>
+  </div>
+</div>

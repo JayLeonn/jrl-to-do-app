@@ -1,0 +1,55 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.wrapper {
+  justify-content: start;
+}
+
+.error-icon {
+  cursor: pointer;
+  color: var(--warningColor);
+  font-size: 80px;
+  width: 80px;
+  height: 80px;
+}
+
+.error-container {
+  line-height: 80px;
+  vertical-align: middle;
+}
+
+.error404 {
+  color: var(--primaryColor);
+  font-size: 80px;
+  vertical-align: middle;
+  margin: auto 0;
+  font-weight: 700;
+}
+
+.redirect,
+.notFound {
+  margin: var(--defaultMargin) 0 var(--defaultMargin) var(--defaultMargin);
+  font-size: 30px;
+  font-weight: 100;
+  color: var(--textColor);
+}
+
+h2.redirect {
+  margin-top: 0;
+}
+
+/* redirect to frontpage */
+.home-link {
+  color: var(--primaryColor);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+span:focus {
+  outline: 0 !important;
+}
