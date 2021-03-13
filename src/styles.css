@@ -48,14 +48,6 @@ body {
 }
 /* -------- */
 
-.float-right {
-  float: right;
-}
-
-.float-left {
-  float: left;
-}
-
 a {
   text-decoration: none;
 }
