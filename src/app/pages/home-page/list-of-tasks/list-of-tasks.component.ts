@@ -1,7 +1,6 @@
 import { Task } from './../../../models/task.interface';
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from 'src/app/services/storage.service';
-import { TaskCategoryType } from 'src/app/models';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
@@ -12,9 +11,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 export class ListOfTasksComponent implements OnInit {
   constructor(public storageService: StorageService) {}
 
-  ngOnInit(): void {
-    this.storageService.getStorageItems();
-  }
+  ngOnInit(): void {}
 
   drop(event: CdkDragDrop<Task[]>): void {
     moveItemInArray(

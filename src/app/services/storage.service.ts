@@ -8,6 +8,10 @@ export class StorageService {
   private storageIdentifier = 'JRL_To_Do_Tasks';
   public tasks: Task[] = []; // Array of tasks that is looped in list of tasks
 
+  constructor() {
+    this.getStorageItems();
+  }
+
   /**
    * Add new task to storage
    * @param task To Do Task
@@ -28,7 +32,7 @@ export class StorageService {
   /**
    * Get tasks from storage with specified ID
    */
-  public getStorageItems(): void {
+  private getStorageItems(): void {
     this.tasks = JSON.parse(
       localStorage.getItem(this.storageIdentifier) || '[]'
     );
@@ -39,11 +43,10 @@ export class StorageService {
    * @param task To Do Task
    */
   public deleteTask(task: Task): void {
-    const tempTasks: Task[] = this.tasks.filter((storageTask) => {
+    this.tasks = this.tasks.filter((storageTask) => {
       return storageTask !== task;
     });
-    this.setTasksToStorage(tempTasks);
-    this.getStorageItems();
+    this.setTasksToStorage(this.tasks);
   }
 
   /**
@@ -54,9 +57,7 @@ export class StorageService {
     const idx = this.tasks.findIndex(
       (storageTask) => storageTask.taskId === task.taskId
     );
-    const tempTasks = this.tasks;
-    tempTasks[idx].isChecked = !task.isChecked;
-    this.setTasksToStorage(tempTasks);
-    this.getStorageItems();
+    this.tasks[idx].isChecked = !task.isChecked;
+    this.setTasksToStorage(this.tasks);
   }
 }
