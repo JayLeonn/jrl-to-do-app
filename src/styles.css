@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "../node_modules/normalize.css/normalize.css"; /* Normalize.css to remove differing default browser styles */
-@import "@angular/material/prebuilt-themes/purple-green.css";
+@import "@angular/material/prebuilt-themes/purple-green.css"; /* Angular Material Theem */
 
 /**** Application wide variables ****/
 
@@ -21,12 +22,12 @@
     0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 10px 2px rgba(0, 0, 0, 0.12);
 
   /* Category colors */
-  --workColor: #64b5f6;
-  --homeColor: #81c784;
-  --sportsColor: #ff8a65;
-  --paymentColor: #ffd54f;
-  --meetingColor: #ba68c8;
-  --otherColor: #e8eaf6;
+  --workColor: #64b5f6; /* work */
+  --homeColor: #81c784; /* home */
+  --sportsColor: #ff8a65; /* sports */
+  --paymentColor: #ffd54f; /* payment */
+  --meetingColor: #ba68c8; /* meeting */
+  --otherColor: #e8eaf6; /* other */
 }
 
 body {
@@ -59,6 +60,7 @@ a {
   text-decoration: none;
 }
 
+/* Global form styles  */
 .mat-form-field-appearance-outline .mat-form-field-outline {
   color: var(--textColor);
   opacity: 1;
