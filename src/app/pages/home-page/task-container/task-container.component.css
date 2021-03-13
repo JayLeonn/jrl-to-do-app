@@ -130,6 +130,7 @@ div.other
   background: var(--otherColor);
 }
 
+/* Media Queries */
 @media only screen and (max-width: 1024px) {
   .description,
   .date {
