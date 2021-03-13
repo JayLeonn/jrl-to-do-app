@@ -33,7 +33,7 @@
 
 .redirect,
 .notFound {
-  margin-left: 10px;
+  margin: var(--defaultMargin) 0 var(--defaultMargin) var(--defaultMargin);
   font-size: 30px;
   font-weight: 100;
   color: var(--textColor);
@@ -44,7 +44,7 @@ h2.redirect {
 }
 
 /* redirect to frontpage */
-.home {
+.home-link {
   color: var(--primaryColor);
   cursor: pointer;
   text-decoration: underline;
@@ -52,10 +52,4 @@ h2.redirect {
 
 span:focus {
   outline: 0 !important;
-}
-
-@media only screen and (max-width: 1024px) {
-  .error-container {
-    display: none;
-  }
 }

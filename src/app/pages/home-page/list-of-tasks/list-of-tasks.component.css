@@ -1,0 +1,39 @@
+.list-of-tasks {
+  width: 600px;
+  max-width: 85vw;
+  margin: 0 auto;
+}
+
+.list-of-tasks .cdk-drag {
+  margin: var(--defaultMargin) auto;
+}
+
+.task-container {
+  width: 100%;
+  min-height: 50px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.task-container:hover {
+  cursor: pointer;
+}
+
+/* CDK Drag & Drop */
+.cdk-drag-preview {
+  /* make drag element look nice */
+  box-shadow: var(--defaultShadow);
+}
+
+.cdk-drag-placeholder {
+  /* hide 'old' element */
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.list-of-tasks.cdk-drop-list-dragging .cdk-drag:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

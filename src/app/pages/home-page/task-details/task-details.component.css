@@ -1,0 +1,62 @@
+.description-field {
+  width: 600px;
+  max-width: 90vw;
+}
+
+.details-row {
+  justify-content: center;
+}
+
+.details-row .mat-form-field:first-child {
+  padding-right: calc(var(--defaultMargin) / 2);
+}
+
+.details-row .mat-form-field:last-child {
+  padding-left: calc(var(--defaultMargin) / 2);
+}
+
+.category-field,
+.due-date-field {
+  width: 300px;
+  max-width: 45vw;
+  box-sizing: border-box;
+}
+
+/* Move the default mat-select panel down */
+::ng-deep .category-selection {
+  margin-top: 30px !important;
+}
+
+.border-work {
+  border-left: 10px solid var(--workColor);
+  color: var(--workColor)
+}
+
+.border-home {
+  border-left: 10px solid var(--homeColor);
+  color: var(--homeColor);
+}
+
+.border-sports {
+  border-left: 10px solid var(--sportsColor);
+  color: var(--sportsColor);
+
+}
+
+.border-payment {
+  border-left: 10px solid var(--paymentColor);
+  color: var(--paymentColor);
+
+}
+
+.border-meeting {
+  border-left: 10px solid var(--meetingColor);
+  color: var(--meetingColor);
+
+}
+
+.border-other {
+  border-left: 10px solid var(--otherColor);
+  color: var(--otherColor);
+
+}
