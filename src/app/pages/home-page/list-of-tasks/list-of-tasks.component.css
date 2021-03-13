@@ -16,7 +16,7 @@
 }
 
 .task-container:hover {
-  cursor: pointer;
+  cursor: grab;
 }
 
 /* CDK Drag & Drop */
