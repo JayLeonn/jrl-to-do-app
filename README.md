@@ -1,4 +1,4 @@
-# JrlToDoApp
+# [Jrl-To-Do-App](http://joonasleonsaari.io/jrl-to-do-app/home)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6 using --strict flag [Angular strict](https://angular.io/guide/strict-mode)
 
