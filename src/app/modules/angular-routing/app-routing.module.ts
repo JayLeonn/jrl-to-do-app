@@ -14,11 +14,11 @@ const routes: Routes = [
     component: HomePageLayoutComponent,
   },
   {
-    path: '404',
+    path: '404', // path: /404
     component: NotFoundComponent,
   },
   {
-    path: '**',
+    path: '**', // path: any path that doesn't match above
     redirectTo: '404',
     pathMatch: 'full',
   },

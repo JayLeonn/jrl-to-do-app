@@ -8,10 +8,6 @@ import { AngularMaterialModule } from './modules/angular-material/angular.materi
 import { NotFoundModule } from './modules/not-found/not-found.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
-/* Global Components */
-
-
 /* Home page components */
 import { HomePageLayoutComponent } from './pages/home-page/home-page-layout/home-page-layout.component';
 import { NewTaskComponent } from './pages/home-page/new-task/new-task.component';

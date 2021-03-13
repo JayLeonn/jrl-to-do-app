@@ -14,19 +14,14 @@ export class ListOfTasksComponent implements OnInit {
 
   ngOnInit(): void {
     this.storageService.getStorageItems();
-    console.log(this.storageService.tasks);
   }
 
-
   drop(event: CdkDragDrop<Task[]>): void {
-    const tempArray = this.storageService.tasks;
     moveItemInArray(
-      tempArray,
+      this.storageService.tasks,
       event.previousIndex,
       event.currentIndex
     );
-    this.storageService.setTasksToStorage(tempArray);
+    this.storageService.setTasksToStorage(this.storageService.tasks);
   }
-
-
 }
