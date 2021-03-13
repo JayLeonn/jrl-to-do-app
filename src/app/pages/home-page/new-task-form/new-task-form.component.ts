@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TaskCategoryType } from 'src/app/models/enums/task-category.enum';
 
 @Component({
-  selector: 'app-task-details',
-  templateUrl: './task-details.component.html',
-  styleUrls: ['./task-details.component.css'],
+  selector: 'app-new-task-form',
+  templateUrl: './new-task-form.component.html',
+  styleUrls: ['./new-task-form.component.css'],
 })
-export class TaskDetailsComponent implements OnInit, OnChanges {
+export class NewTaskFormComponent implements OnInit, OnChanges {
   @Input() parentForm = this.initFormGroup();
   @Input() groupName = 'task';
 

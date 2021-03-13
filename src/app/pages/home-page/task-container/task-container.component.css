@@ -1,5 +1,3 @@
-
-
 .category-ribbon {
   width: 10px;
   border-top-left-radius: 4px;
@@ -40,6 +38,11 @@ p {
 }
 
 .mat-icon,
+.mat-checkbox {
+  display: block;
+  margin: auto;
+}
+
 .mat-checkbox {
   margin: auto var(--defaultMargin);
 }
@@ -116,10 +119,7 @@ div.meeting
 }
 
 /* Other */
-div.other
-  + ::ng-deep
-  .mat-checkbox-checked.mat-accent
-  .mat-checkbox-background,
+div.other + ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,
 .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
 div.other
   + ::ng-deep
@@ -131,7 +131,8 @@ div.other
 }
 
 @media only screen and (max-width: 1024px) {
-    .description, .date{
-        font-size: 12px;
-    }
+  .description,
+  .date {
+    font-size: 12px;
+  }
 }

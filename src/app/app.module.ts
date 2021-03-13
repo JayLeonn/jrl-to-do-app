@@ -11,18 +11,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 /* Home page components */
 import { HomePageLayoutComponent } from './pages/home-page/home-page-layout/home-page-layout.component';
 import { NewTaskComponent } from './pages/home-page/new-task/new-task.component';
-import { TaskDetailsComponent } from './pages/home-page/task-details/task-details.component';
 import { ListOfTasksComponent } from './pages/home-page/list-of-tasks/list-of-tasks.component';
 import { TaskContainerComponent } from './pages/home-page/task-container/task-container.component';
+import { NewTaskFormComponent } from './pages/home-page/new-task-form/new-task-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageLayoutComponent,
-    TaskDetailsComponent,
+    NewTaskFormComponent,
     ListOfTasksComponent,
     NewTaskComponent,
-    TaskContainerComponent
+    TaskContainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +34,6 @@ import { TaskContainerComponent } from './pages/home-page/task-container/task-co
     ReactiveFormsModule,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'en-FI' }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
