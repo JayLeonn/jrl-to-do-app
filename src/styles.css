@@ -60,6 +60,12 @@ a {
   text-decoration: none;
 }
 
+input[type="text"],
+input[type="number"],
+textarea {
+  font-size: 16px !important; /* input fields with less than 16px cause a zoom effect on mobile browsers */
+}
+
 /* Global form styles  */
 .mat-form-field-appearance-outline .mat-form-field-outline {
   color: var(--textColor);
