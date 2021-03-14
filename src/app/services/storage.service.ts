@@ -56,7 +56,7 @@ export class StorageService {
   public updateTaskStatus(taskToBeUpdated: Task): void {
     this.tasks.map((task) => {
       if (task.taskId === taskToBeUpdated.taskId) {
-        task.isChecked = !taskToBeUpdated.isChecked;
+        task.isChecked = !task.isChecked;
       }
       this.setTasksToStorage(this.tasks);
     });
