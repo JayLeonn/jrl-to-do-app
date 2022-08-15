@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import { StorageService } from 'src/app/services/storage.service';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
   styleUrls: ['./new-task.component.css'],
 })
 export class NewTaskComponent implements OnInit {
-  formGroup = new FormGroup({});
+  formGroup = new UntypedFormGroup({});
 
   constructor(private storageService: StorageService) {}
 
@@ -23,6 +23,6 @@ export class NewTaskComponent implements OnInit {
       isChecked: false,
       ...this.formGroup.value.task,
     });
-    this.formGroup = new FormGroup({});
+    this.formGroup = new UntypedFormGroup({});
   }
 }

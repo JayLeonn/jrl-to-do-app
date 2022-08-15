@@ -1,13 +1,5 @@
-<div
-  *ngIf="storageService.tasks.length"
-  class="list-of-tasks"
-  cdkDropList
-  (cdkDropListDropped)="drop($event)"
->
+<div *ngIf="storageService.tasks.length" class="list-of-tasks" cdkDropList (cdkDropListDropped)="drop($event)">
   <div *ngFor="let task of storageService.tasks" class="flex-row cdk-drag" cdkDrag>
-    <app-task-container
-      class="task-container"
-      [task]="task"
-    ></app-task-container>
+    <app-task-container class="task-container" [task]="task"></app-task-container>
   </div>
 </div>

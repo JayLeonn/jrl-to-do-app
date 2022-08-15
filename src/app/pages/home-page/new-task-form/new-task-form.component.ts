@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { TaskCategoryType } from 'src/app/models/enums/task-category.enum';
 
 @Component({
@@ -13,7 +13,7 @@ export class NewTaskFormComponent implements OnInit, OnChanges {
 
   categoryTypes: TaskCategoryType[] = Object.values(TaskCategoryType);
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: UntypedFormBuilder) {}
 
   ngOnInit(): void {}
 
@@ -21,11 +21,11 @@ export class NewTaskFormComponent implements OnInit, OnChanges {
     this.parentForm.addControl(this.groupName, this.initFormGroup());
   }
 
-  get formGroup(): FormGroup {
-    return this.parentForm.get(this.groupName) as FormGroup;
+  get formGroup(): UntypedFormGroup {
+    return this.parentForm.get(this.groupName) as UntypedFormGroup;
   }
 
-  initFormGroup(): FormGroup {
+  initFormGroup(): UntypedFormGroup {
     return this.fb.group({
       description: [undefined, Validators.required],
       category: [undefined, Validators.required],
