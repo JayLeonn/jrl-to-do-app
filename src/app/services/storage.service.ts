@@ -51,13 +51,14 @@ export class StorageService {
 
   /**
    * Updates task.isChecked (boolean status)
-   * @param task To Do Task
+   * @param taskToBeUpdated To Do Task
    */
-  public updateTaskStatus(task: Task): void {
-    const idx = this.tasks.findIndex(
-      (storageTask) => storageTask.taskId === task.taskId
-    );
-    this.tasks[idx].isChecked = !task.isChecked;
-    this.setTasksToStorage(this.tasks);
+  public updateTaskStatus(taskToBeUpdated: Task): void {
+    this.tasks.map((task) => {
+      if (task.taskId === taskToBeUpdated.taskId) {
+        task.isChecked = !task.isChecked;
+      }
+      this.setTasksToStorage(this.tasks);
+    });
   }
 }

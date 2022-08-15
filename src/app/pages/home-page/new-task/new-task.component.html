@@ -1,15 +1,7 @@
 <div class="new-task-container">
-  <app-new-task-form
-    [parentForm]="formGroup"
-    groupName="task"
-    class="create-task"
-  ></app-new-task-form>
-  <button
-    mat-stroked-button
-    [disabled]="formGroup.pristine || formGroup.invalid"
-    (click)="createTask()"
-    class="create-task"
-  >
+  <app-new-task-form [parentForm]="formGroup" groupName="task" class="create-task"></app-new-task-form>
+  <button mat-stroked-button [disabled]="formGroup.pristine || formGroup.invalid" (click)="createTask()"
+    class="create-task">
     CREATE
   </button>
 </div>

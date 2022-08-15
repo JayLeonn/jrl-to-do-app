@@ -1,50 +1,25 @@
 <div [formGroup]="formGroup">
   <mat-form-field appearance="outline" class="description-field" color="accent">
     <mat-label>Remember to...</mat-label>
-    <textarea
-      matInput
-      formControlName="description"
-      type="text"
-      #descriptionInput
-      required
-      maxlength="255"
-    ></textarea>
-    <mat-hint align="end"
-      >{{ descriptionInput.value?.length || 0 }}/255</mat-hint
-    >
-    <mat-error *ngIf="formGroup.controls.description.invalid"
-      >Feeling lazy?
+    <textarea matInput formControlName="description" type="text" #descriptionInput required maxlength="255"></textarea>
+    <mat-hint align="end">{{ descriptionInput.value.length || 0 }}/255</mat-hint>
+    <mat-error *ngIf="formGroup.controls.description.invalid">Feeling lazy?
     </mat-error>
   </mat-form-field>
 
   <div class="flex-row details-row">
     <mat-form-field appearance="outline" color="accent" class="category-field">
       <mat-label>Category</mat-label>
-      <mat-select
-        formControlName="category"
-        disableOptionCentering
-        panelClass="category-selection"
-        required
-      >
+      <mat-select formControlName="category" disableOptionCentering panelClass="category-selection" required>
         <mat-option *ngFor="let category of categoryTypes" [value]="category" [ngClass]="'border-' + category">
           {{ category | titlecase }}
         </mat-option>
       </mat-select>
     </mat-form-field>
 
-    <mat-form-field
-      appearance="outline"
-      color="accent"
-      class="due-date-field"
-      (click)="picker.open()"
-    >
+    <mat-form-field appearance="outline" color="accent" class="due-date-field" (click)="picker.open()">
       <mat-label>Due date</mat-label>
-      <input
-        readonly
-        matInput
-        [matDatepicker]="picker"
-        formControlName="dueDate"
-      />
+      <input readonly matInput [matDatepicker]="picker" formControlName="dueDate" />
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker touchUi #picker></mat-datepicker>
     </mat-form-field>
